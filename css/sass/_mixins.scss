@@ -1,0 +1,71 @@
+
+@mixin linear-gradient($from, $to) {
+	background: linear-gradient(bottom, $from 0%, $to 100%);
+	background: -o-linear-gradient(bottom, $from 0%, $to 100%);
+	background: -moz-linear-gradient(bottom, $from 0%, $to 100%);
+	background: -webkit-linear-gradient(bottom, $from 0%, $to 100%);
+	background: -ms-linear-gradient(bottom, $from 0%, $to 100%);
+
+	background: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, $from),
+		color-stop(1, $to)
+	);
+}
+
+@mixin linear-gradient-with-transparent-background($from, $to) {
+	background: transparent linear-gradient(bottom, $from 0%, $to 100%);
+	background: transparent -o-linear-gradient(bottom, $from 0%, $to 100%);
+	background: transparent -moz-linear-gradient(bottom, $from 0%, $to 100%);
+	background: transparent -webkit-linear-gradient(bottom, $from 0%, $to 100%);
+	background: transparent -ms-linear-gradient(bottom, $from 0%, $to 100%);
+
+	background: transparent -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, $from),
+		color-stop(1, $to)
+	);
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+
+
+@mixin clearfix {
+	overflow:hidden; 
+	_overflow:visible; 
+	zoom:1;
+}
+
+
+// Function to join items together into a list for use in mixins like box-shadow
+
+@function join-items($item1, $item2:false,$item3:false, $item4:false, $item5:false) {
+
+	$list: $item1;
+
+	@if $item2 { $list: $list + ',' + $item2; }
+	@if $item3 { $list: $list + ',' + $item3; }
+	@if $item4 { $list: $list + ',' + $item4; }
+	@if $item5 { $list: $list + ',' + $item5; }
+	@return $list;
+}
+
+// Provides cross-browser box shadows when one or more box shadows are needed.
+// Each shadow argument should adhere to the standard css3 syntax for the box-shadow property.
+
+@mixin box-shadow($shadow-1, $shadow-2:false, $shadow-3:false, $shadow-4:false, $shadow-5:false) {
+	$shadow: unquote(join-items($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5));
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	box-shadow: $shadow;
+}

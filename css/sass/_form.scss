@@ -1,0 +1,78 @@
+.button{
+	padding: 10px 15px;
+	color: $pure-white;
+	text-decoration: none;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
+.green-button{
+	@extend .button;
+	background: $Green;
+	border-bottom: 4px solid $Dark-Green;
+
+	&:hover{
+		color: $Dark-Grey;
+		border-bottom: 4px solid $Dark-Grey;	
+	}
+}
+
+.yellow-button{
+	@extend .button;
+	background: $Yellow;
+	border-bottom: 4px solid $Dark-Yellow;
+
+	&:hover{
+		color: $Dark-Grey;
+		border-bottom: 4px solid $Dark-Grey;	
+	}
+}
+
+.grey-button{
+	@extend .button;
+	background: $Dark-Grey;
+	border-bottom: 4px solid $Bottom-Grey;
+
+	&:hover{
+		color: $Yellow;
+		border-bottom: 4px solid $Yellow;	
+	}
+}
+
+input[type='text'], select{
+	border: 1px solid $Dark-Grey;
+	padding: 8px 10px;
+	width: 40%;
+}
+
+select{
+	width: 70%;
+}
+
+label{
+	display: inline-block;
+	margin: 20px 0;
+	width: 100%;
+}
+.don-option{
+	padding: 5px 10px;
+	border: 1px solid $Dark-Grey;
+	text-decoration: none;
+	color: $Dark-Grey;
+
+	&.selected{
+		background: $Green;
+		color: $pure-white;
+		border: 1px solid $Green;
+	}
+}
+
+.cust-error{
+	border: 1px solid #D0021B;
+	background: rgba(208,2,27,0.2);
+	color: #D0021B;
+	display: none;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}

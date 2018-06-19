@@ -1,0 +1,176 @@
+body{
+	border-top: 10px solid $Yellow;
+	color: $Dark-Grey;
+	font-family: 'Open Sans', san-serif;
+	background: $Off-white;
+}
+
+.container{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.lrg-container{
+	width: 70%;
+	margin: 0 auto;
+}
+
+.nav-container{
+	height: 76px;
+	padding:18px 10px;
+	background: $pure-white;
+
+	.logo{
+		float: left;
+	}
+
+	.main-nav{
+		float: left;
+		padding-top: 20px;
+		margin: 0 20px; 
+
+		ul li{
+			display: inline-block;
+			list-item: none;
+			margin-right: 20px;
+
+			a{
+				color: $Dark-Grey;
+				text-decoration: none;
+
+				&:hover{
+					border-bottom: 2px solid $Yellow;
+				}
+			}
+		}
+
+	}
+
+	.search{
+		float: left;
+		margin: 10px 40px 0 0;
+
+		input[type='text']{	
+			width: 250px;
+		}
+
+		.search_but{
+			background: url("../images/magnfier.png") no-repeat;
+			border: none;
+			height: 24px;
+			width: 24px;
+			position: relative;
+			right: 25px;
+			top: -5px;
+		}
+	}
+
+	.donate-button{
+		padding-top: 15px;
+	}
+}
+
+.donation{
+	padding: 30px 0;	
+
+	.donation-widget{
+		background: $pure-white;
+		width: 60%;
+		margin: 0 auto;
+
+		.donation-form{
+			float: left;
+			width: calc( 100% - 240px);
+			padding: 40px 30px;
+		}
+
+		h1{
+			color: $Green;
+			font-size: 1.6rem;
+			margin-bottom: 50px;
+		}
+
+		#donation-image{
+			width: 180px;
+			height: 544px;
+			float: left;
+
+			&.giraffe{
+				background: url("../images/giraffe-image.jpg") center center;
+			}
+
+			&.rhino{
+				background: url("../images/rhino-image.jpg") center center;
+			}
+
+			&.tiger{
+				background: url("../images/tiger-image.jpg") center center;
+			}
+		}
+	}
+}
+
+.wwd{
+	background: $pure-white;
+	padding: 30px 0;
+}
+
+.section-image{
+	float: right;
+	margin-left: 15px;
+	width: 460px;
+}
+
+.cb{
+	clear: both;
+}
+.footer{
+	background: $Dark-Grey;
+	height: 160px;
+	padding: 20px 0;
+
+	.foot-nav{
+		float: left;
+		color: $pure-white;
+		width: 60%;
+	
+		.one-of-three{
+			float: left;
+			width: 30%;
+
+			h1{
+				font-size: 0.9rem;
+				text-align: left;
+			}
+
+			ul li{
+				list-item: none;
+				font-size: 0.8rem;
+				margin: 8px 0;
+			
+				a{
+					color: $pure-white;
+					text-decoration: none;
+
+					&:hover{
+						border-bottom: 2px solid $Yellow;
+					}
+				}
+
+			}
+		}
+
+	}
+
+	.foot-address{
+		float: left;
+		width: 35%;
+		text-align: center;
+
+		p{
+			margin-top: 15px;
+			text-align: right;
+		}
+	}
+
+}
